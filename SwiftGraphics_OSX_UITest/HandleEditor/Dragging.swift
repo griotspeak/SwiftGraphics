@@ -29,9 +29,9 @@ class Drag: NSObject, NSGestureRecognizerDelegate {
     }
 
     internal func pan(recognizer:NSPanGestureRecognizer) {
-        switch recognizer.state {
+        switch recognizer.state { 
             case .Began:
-                let location = recognizer.locationInView(recognizer.view)
+                let location = recognize r.locationInView(recognizer.view)
                 draggedObject = objectForPoint(location)
                 if draggedObject != nil {
                     offset = location - draggedObject.position
